@@ -1,0 +1,1 @@
+This file must contain the complete, unmodified AI conversation required by the evaluator. Replace this placeholder by pasting the conversation as-is before submission; do not edit the pasted transcript.

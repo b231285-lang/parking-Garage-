@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({plateNumber:{type:String,required:true,index:true},vehicleType:{type:String,enum:['compact','standard','ev'],required:true},spotId:{type:mongoose.Schema.Types.ObjectId,ref:'Spot',required:true},entryTime:{type:Date,default:Date.now},exitTime:Date,fee:Number,closedBy:{type:String,enum:['checkout','clock']},status:{type:String,enum:['active','completed'],default:'active'},userId:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true}},{timestamps:true});
+schema.index({plateNumber:1,status:1}); export default mongoose.model('ParkingRecord',schema);
